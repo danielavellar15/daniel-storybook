@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { UiComponentsComponent } from './ui-components.component';
-
-
+import { SidenavModule } from './components/sidenav/sidenav.module';
 
 @NgModule({
   declarations: [
-    UiComponentsComponent
+    
   ],
   imports: [
+    SidenavModule
   ],
   exports: [
-    UiComponentsComponent
+    SidenavModule
   ]
 })
 export class UiComponentsModule { }

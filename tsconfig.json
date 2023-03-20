@@ -21,7 +21,10 @@
     "useDefineForClassFields": false,
     "paths": {
       "ui-components": [
-        "dist/ui-components"
+        "projects/ui-components/src/lib"
+      ],
+      "ui-components/*": [
+        "projects/ui-components/src/lib/*"
       ]
     },
     "lib": [
