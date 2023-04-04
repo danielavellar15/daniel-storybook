@@ -1,1 +1,13 @@
-<p>sidenav-item works!</p>
+<button class="sidenav-item" (click)="toggleSubitems(!collapsed)">
+  {{ title }}
+</button>
+<div
+  [id]="idComponent"
+  #subitems
+  class="subitems"
+  [ngClass]="{ open: !collapsed }"
+>
+  <div id="subitems-inner" class="subitems-inner">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav.component';
 import { SidenavItemComponent } from './sidenav-item/sidenav-item.component';
 import { SidenavSubitemComponent } from './sidenav-subitem/sidenav-subitem.component';
+import { TypographyModule } from '../typography/typography.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,7 @@ import { SidenavSubitemComponent } from './sidenav-subitem/sidenav-subitem.compo
     SidenavItemComponent,
     SidenavSubitemComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, TypographyModule],
   exports: [SidenavComponent, SidenavItemComponent, SidenavSubitemComponent],
 })
 export class SidenavModule {}

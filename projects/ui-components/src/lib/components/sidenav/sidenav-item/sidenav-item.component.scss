@@ -1,0 +1,37 @@
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 16px;
+  color: inherit;
+  background-color: inherit;
+  transition: 0.25s;
+  border-radius: 6px;
+}
+
+button.active,
+.subnav {
+  background: #424242;
+}
+
+button:hover {
+  background: #424242;
+}
+
+.subitems {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}

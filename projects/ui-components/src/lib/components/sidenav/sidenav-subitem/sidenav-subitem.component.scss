@@ -1,0 +1,44 @@
+:host {
+  width: 100%;
+}
+
+.sidenav-subitem {
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 16px 0 64px;
+  color: inherit;
+  background-color: inherit;
+  border-radius: 6px;
+}
+
+.sidenav-subitem.active,
+.subnav {
+  background: #424242;
+}
+
+.sidenav-subitem:hover {
+  background: #424242;
+}
+
+.sidenav-subitem::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 40%);
+}
