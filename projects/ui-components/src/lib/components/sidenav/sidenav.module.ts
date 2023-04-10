@@ -4,6 +4,7 @@ import { SidenavComponent } from './sidenav.component';
 import { SidenavItemComponent } from './sidenav-item/sidenav-item.component';
 import { SidenavSubitemComponent } from './sidenav-subitem/sidenav-subitem.component';
 import { TypographyModule } from '../typography/typography.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,7 @@ import { TypographyModule } from '../typography/typography.module';
     SidenavItemComponent,
     SidenavSubitemComponent,
   ],
-  imports: [CommonModule, TypographyModule],
+  imports: [CommonModule, TypographyModule, RouterModule],
   exports: [SidenavComponent, SidenavItemComponent, SidenavSubitemComponent],
 })
 export class SidenavModule {}

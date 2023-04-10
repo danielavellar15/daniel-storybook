@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
@@ -16,17 +17,19 @@ import { v4 as uuidv4 } from 'uuid';
   templateUrl: './sidenav-item.component.html',
   styleUrls: ['./sidenav-item.component.scss'],
 })
-export class SidenavItemComponent implements OnInit {
+export class SidenavItemComponent implements OnInit, AfterViewInit {
   @ViewChild('subitems', { static: false }) subitemsElementRef!: ElementRef;
-  @Input() title: string = '';
-  @Input() icon: string = '';
-  @Input() navigation: string = '/';
   @Input() collapsed: boolean = true;
   @Output() openSubItem: EventEmitter<string> = new EventEmitter<string>();
 
   idComponent: string = uuidv4();
+  hasSubItems = false;
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    this.hasSubItems = this.verifySubItems();
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     //detectar mudanca para aberto e realizar os ajustes
@@ -37,6 +40,13 @@ export class SidenavItemComponent implements OnInit {
         this.closeSubItems();
       }
     }
+  }
+
+  verifySubItems(): boolean {
+    return (
+      this.subitemsElementRef?.nativeElement.querySelector('ui-sidenav-item') !=
+      undefined
+    );
   }
 
   toggleSubitems(collapsed: boolean) {

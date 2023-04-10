@@ -51,12 +51,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".header-icon {\n  width: 36px;\n  margin: 0 8px 0 18px;\n}\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<ui-sidenav></ui-sidenav>"
+            "templateData": "<ui-sidenav>\n  <ng-container header>\n    <svg\n      class=\"header-icon\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n      <g\n        id=\"SVGRepo_tracerCarrier\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n      ></g>\n      <g id=\"SVGRepo_iconCarrier\">\n        <path\n          d=\"M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206V8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21\"\n          stroke=\"#ffffff\"\n        ></path>\n        <path\n          d=\"M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022V16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5\"\n          stroke=\"#ffffff\"\n        ></path>\n        <circle cx=\"12\" cy=\"12\" r=\"9.5\" stroke=\"#ffffff\"></circle>\n      </g>\n    </svg>\n    <ui-typography variant=\"h3\"> Home</ui-typography>\n  </ng-container>\n</ui-sidenav>\n"
         },
         {
             "name": "SidenavComponent",
@@ -91,12 +91,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap\");\n\n.sidenav {\n  font-family: \"Open Sans\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 260px;\n  height: 100%;\n  background: #211f25;\n  color: #ffffff;\n  transition: width 0.4s;\n}\n\n.sidenav header {\n  display: flex;\n  align-items: center;\n  height: 72px;\n  padding: 0 1.25rem 0 0;\n  border-bottom: 1px solid rgb(255 255 255 / 12%);\n}\n",
+                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap\");\n\n.sidenav {\n  font-family: \"Inter\", sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 260px;\n  height: 100%;\n  background: #212121;\n  color: #ffffff;\n  transition: width 0.4s;\n  padding: 16px;\n}\n\n.sidenav header {\n  display: flex;\n  align-items: center;\n  height: 72px;\n  padding: 0 1.25rem 0 0;\n}\n",
                     "styleUrl": "./sidenav.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<aside class=\"sidenav\">\n  <header class=\"header\">Header</header>\n  <ui-sidenav-item title=\"Home\">\n    <ui-sidenav-subitem title=\"Teste1\"></ui-sidenav-subitem>\n  </ui-sidenav-item>\n  <ui-sidenav-item title=\"Settings\">\n    <ui-sidenav-subitem title=\"Teste1\"></ui-sidenav-subitem>\n    <ui-sidenav-subitem title=\"Teste2\"></ui-sidenav-subitem>\n  </ui-sidenav-item>\n  <ui-sidenav-item title=\"Exit\"> </ui-sidenav-item>\n</aside>\n"
+            "templateData": "<aside class=\"sidenav\">\n  <header class=\"header\">\n    <ng-content select=\"[header]\"></ng-content>\n  </header>\n  <ui-sidenav-item title=\"Home\">\n    <ui-sidenav-subitem title=\"Teste1\"></ui-sidenav-subitem>\n  </ui-sidenav-item>\n  <ui-sidenav-item title=\"Settings\">\n    <ui-sidenav-subitem title=\"Teste1\"></ui-sidenav-subitem>\n    <ui-sidenav-subitem title=\"Teste2\"></ui-sidenav-subitem>\n  </ui-sidenav-item>\n  <ui-sidenav-item title=\"Exit\"> </ui-sidenav-item>\n</aside>\n"
         },
         {
             "name": "SidenavItemComponent",
@@ -318,7 +318,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n  background: transparent;\n  border: 0;\n  cursor: pointer;\n  text-align: left;\n  position: relative;\n  display: flex;\n  gap: 16px;\n  align-items: center;\n  height: 50px;\n  width: 100%;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 1;\n  padding: 0 16px 0 25px;\n  color: inherit;\n  background-color: inherit;\n  transition: 0.25s;\n}\n\nbutton.active,\n.subnav {\n  background: #32303c;\n}\n\nbutton:hover {\n  background: #3c3a48;\n}\n\n.subitems {\n  position: relative;\n  overflow: hidden;\n  height: 0;\n  transition: 0.4s;\n}\n",
+                    "data": "button {\n  background: transparent;\n  border: 0;\n  cursor: pointer;\n  text-align: left;\n  position: relative;\n  display: flex;\n  gap: 16px;\n  align-items: center;\n  height: 50px;\n  width: 100%;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 1;\n  padding: 16px;\n  color: inherit;\n  background-color: inherit;\n  transition: 0.25s;\n  border-radius: 6px;\n}\n\nbutton.active,\n.subnav {\n  background: #424242;\n}\n\nbutton:hover {\n  background: #424242;\n}\n\n.subitems {\n  position: relative;\n  overflow: hidden;\n  height: 0;\n  transition: 0.4s;\n}\n",
                     "styleUrl": "./sidenav-item.component.scss"
                 }
             ],
@@ -380,7 +380,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  width: 100%;\n}\n\n.sidenav-subitem {\n  border: 0;\n  cursor: pointer;\n  text-align: left;\n  position: relative;\n  display: flex;\n  gap: 16px;\n  align-items: center;\n  height: 50px;\n  width: 100%;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 1;\n  padding: 0 16px 0 64px;\n  color: inherit;\n  background-color: #2d2d2d74;\n}\n\n.sidenav-subitem.active,\n.subnav {\n  background: #32303c;\n}\n\n.sidenav-subitem:hover {\n  background: #3c3a48;\n}\n\n.sidenav-subitem::before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 36px;\n  translate: 0 -50%;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background-color: rgb(255 255 255 / 40%);\n}\n",
+                    "data": ":host {\n  width: 100%;\n}\n\n.sidenav-subitem {\n  border: 0;\n  cursor: pointer;\n  text-align: left;\n  position: relative;\n  display: flex;\n  gap: 16px;\n  align-items: center;\n  height: 50px;\n  width: 100%;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 1;\n  padding: 0 16px 0 64px;\n  color: inherit;\n  background-color: inherit;\n  border-radius: 6px;\n}\n\n.sidenav-subitem.active,\n.subnav {\n  background: #424242;\n}\n\n.sidenav-subitem:hover {\n  background: #424242;\n}\n\n.sidenav-subitem::before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 36px;\n  translate: 0 -50%;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background-color: rgb(255 255 255 / 40%);\n}\n",
                     "styleUrl": "./sidenav-subitem.component.scss"
                 }
             ],
@@ -389,7 +389,7 @@
         },
         {
             "name": "TypographyComponent",
-            "id": "component-TypographyComponent-bc2f41a9410e0bdc31b26ecd324d90ee35c10110b345350f0b25d0eb349b9d93547048cd8173f0fc17eb722a6492db906bc53ed4c7fc15e5a4af8846fb957a51",
+            "id": "component-TypographyComponent-5c2ed82c47f2d509c4b864682743912c3e898e6230f0cbb6354682061d2c10a7d75232f529966a0f14733f6401f301e11623b62465eed9a54fe558650c599e06",
             "file": "projects/ui-components/src/lib/components/typography/typography.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -405,7 +405,17 @@
                 "./typography.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "variant",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -416,28 +426,28 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-typography',\n  templateUrl: './typography.component.html',\n  styleUrls: ['./typography.component.scss']\n})\nexport class TypographyComponent {\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'ui-typography',\n  templateUrl: './typography.component.html',\n  styleUrls: ['./typography.component.scss'],\n})\nexport class TypographyComponent {\n  @Input() variant = 'text';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  line-height: 1.2;\n}\n\nh1,\n.h1 {\n  font-size: 32px;\n  font-weight: 700;\n}\n\nh2,\n.h2 {\n  font-size: 28px;\n  font-weight: 600;\n}\n\nh3,\n.h3 {\n  font-size: 24px;\n  font-weight: 500;\n}\n\nh4,\n.h4 {\n  font-size: 20px;\n  font-weight: 600;\n}\n\nh5,\n.h5 {\n  font-size: 16px;\n  font-weight: 700;\n}\n\nh6,\n.h6 {\n  font-size: 16px;\n  font-weight: 600;\n}\n\n.paragph {\n  font-size: 14px;\n  line-height: 25px;\n  font-weight: 400;\n}\n\n.text {\n  font-size: 14px;\n  line-height: 22px;\n  font-weight: 500;\n}\n",
                     "styleUrl": "./typography.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>typography works!</p>\n"
+            "templateData": "<div [ngClass]=\"variant\">\n  <ng-content></ng-content>\n</div>\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-9f1ee8ee316d202d1a3f865e65607d60798813ab1152669f4ce78ed41909b9db34bd1b19a3f80b679f665af4cc2614366c40e09fa51fe028e4541bf0a9c3d13a",
+            "id": "module-AppModule-701a316b65534cead1576f92a4f9271aff41abee3e352bff5e7f3a0256f4c978bdec80747b72cb9b6eb3de5e302c9a403c2272577ff572241389f3c4cf06db74",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { UiComponentsModule } from 'ui-components/ui-components.module';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    UiComponentsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { UiComponentsModule } from 'ui-components/ui-components.module';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, UiComponentsModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -475,13 +485,13 @@
         },
         {
             "name": "SidenavModule",
-            "id": "module-SidenavModule-d52ac7055553102a5e9672e836a8c1cdaf09e54af6553813fc620293504b83b353dd2f516202b2295625ecab5c47aaab4faf837a233bea5592bd382b1314c034",
+            "id": "module-SidenavModule-797c774b291c5f69a088d7fcda5b8988d808a71ea95136cdd89b0d17d6b4be337ec0d2ea1ac7e99eb19e116d59800075bb7c5f447e75f07047c8a50df6467a79",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ui-components/src/lib/components/sidenav/sidenav.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { SidenavComponent } from './sidenav.component';\nimport { SidenavItemComponent } from './sidenav-item/sidenav-item.component';\nimport { SidenavSubitemComponent } from './sidenav-subitem/sidenav-subitem.component';\n\n@NgModule({\n  declarations: [\n    SidenavComponent,\n    SidenavItemComponent,\n    SidenavSubitemComponent,\n  ],\n  imports: [CommonModule],\n  exports: [SidenavComponent, SidenavItemComponent, SidenavSubitemComponent],\n})\nexport class SidenavModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { SidenavComponent } from './sidenav.component';\nimport { SidenavItemComponent } from './sidenav-item/sidenav-item.component';\nimport { SidenavSubitemComponent } from './sidenav-subitem/sidenav-subitem.component';\nimport { TypographyModule } from '../typography/typography.module';\n\n@NgModule({\n  declarations: [\n    SidenavComponent,\n    SidenavItemComponent,\n    SidenavSubitemComponent,\n  ],\n  imports: [CommonModule, TypographyModule],\n  exports: [SidenavComponent, SidenavItemComponent, SidenavSubitemComponent],\n})\nexport class SidenavModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -503,7 +513,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "TypographyModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -530,14 +544,14 @@
             ]
         },
         {
-            "name": "UiComponentsModule",
-            "id": "module-UiComponentsModule-ae1b1ac2fbaa60960060fc10841ff2a7aac54e7e09214591a6a94789eb458db77845376023f61ed79eb97d024817c886ddeec3f028696e776090a629b4c6bce8",
+            "name": "TypographyModule",
+            "id": "module-TypographyModule-eaa4efc83e8b1c8e276c52bb91a3cef82c575fa652558f6385d92ca2daaf4760262fbd11966819f9c2a72a9d359057da53de65dea1a9606686d15d8ce5dc89a4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "projects/ui-components/src/lib/ui-components.module.ts",
+            "file": "projects/ui-components/src/lib/components/typography/typography.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { SidenavModule } from './components/sidenav/sidenav.module';\nimport { TypographyComponent } from './components/typography/typography.component';\n\n@NgModule({\n  declarations: [\n    \n  \n    TypographyComponent\n  ],\n  imports: [\n    SidenavModule\n  ],\n  exports: [\n    SidenavModule\n  ]\n})\nexport class UiComponentsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TypographyComponent } from './typography.component';\n@NgModule({\n  declarations: [TypographyComponent],\n  imports: [CommonModule],\n  exports: [TypographyComponent],\n})\nexport class TypographyModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -553,9 +567,52 @@
                 },
                 {
                     "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "TypographyComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "UiComponentsModule",
+            "id": "module-UiComponentsModule-1aab1fe013b652a83056cf04b4119dbb8a1425b9d8a6ac68b91ef193df3121f45335f145e79d3d77ca1546cabbb358066dc14eedcd376f68e6caefd5d45eb2d5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/ui-components/src/lib/ui-components.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { SidenavModule } from './components/sidenav/sidenav.module';\nimport { TypographyModule } from './components/typography/typography.module';\n\n@NgModule({\n  declarations: [],\n  imports: [SidenavModule, TypographyModule],\n  exports: [SidenavModule, TypographyModule],\n})\nexport class UiComponentsModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
                     "elements": [
                         {
                             "name": "SidenavModule"
+                        },
+                        {
+                            "name": "TypographyModule"
                         }
                     ]
                 },
@@ -564,6 +621,9 @@
                     "elements": [
                         {
                             "name": "SidenavModule"
+                        },
+                        {
+                            "name": "TypographyModule"
                         }
                     ]
                 },
@@ -690,7 +750,7 @@
                 "linktype": "component",
                 "name": "TypographyComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
