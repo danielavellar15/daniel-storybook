@@ -1,0 +1,39 @@
+:host {
+  width: 100%;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+
+  .item-button {
+    cursor: inherit;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    display: flex;
+    flex: row;
+    align-items: center;
+    height: 50px;
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 16px;
+    line-height: 1;
+    text-align: left;
+    padding: 16px;
+
+    &:hover {
+      background: #424242;
+    }
+  }
+
+  .left-icon > * {
+    width: 24px;
+  }
+
+  .right-icon {
+    margin-left: auto;
+    color: #fff;
+  }
+}

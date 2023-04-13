@@ -1,0 +1,43 @@
+.item-button {
+  cursor: inherit;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+  flex: row;
+  align-items: center;
+  height: 50px;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 16px;
+  line-height: 1;
+  text-align: left;
+  padding: 16px;
+
+  &:hover {
+    background: #424242;
+  }
+}
+
+.subitems {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}
+
+.button-group {
+  display: flex;
+  width: 100%;
+
+  .icon-expand {
+    fill: #ffffff;
+    transition: 0.3s;
+
+    &.active {
+      rotate: -180deg;
+    }
+  }
+}
