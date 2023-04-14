@@ -9,8 +9,6 @@ export class ListItemButtonComponent {
   @Input() title = '';
   @Output() onButtonClick = new EventEmitter();
 
-  hasSubItems = false;
-
   ngOnInit() {}
 
   onClick() {
