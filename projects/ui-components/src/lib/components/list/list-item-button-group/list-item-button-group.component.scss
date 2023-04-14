@@ -11,10 +11,10 @@
   border-radius: 6px;
   box-sizing: border-box;
   width: 100%;
-  gap: 16px;
+  gap: 1rem;
   line-height: 1;
   text-align: left;
-  padding: 16px;
+  padding: 1rem;
 
   &:hover {
     background: #424242;
@@ -29,7 +29,7 @@
 }
 
 .subitems-container {
-  padding-inline-start: 16px;
+  padding-inline-start: 1rem;
 }
 
 .button-group {
