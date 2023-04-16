@@ -1,0 +1,11 @@
+<div class="screen" [class]="theme">
+  <div class="sidenav">
+    <ng-content select="ui-sidenav"></ng-content>
+  </div>
+  <div class="container-right">
+    <div class="header">
+      <ng-content select="ui-header"></ng-content>
+    </div>
+    <main><ng-content></ng-content></main>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+:host {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  height: 70px;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  height: inherit;
+  width: -webkit-fill-available;
+}

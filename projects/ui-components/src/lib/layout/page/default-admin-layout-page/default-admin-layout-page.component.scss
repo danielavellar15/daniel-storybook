@@ -1,0 +1,39 @@
+@import "../../../../../styles.scss";
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+
+  .sidenav {
+    width: fit-content;
+  }
+
+  .container-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    main {
+      flex: 1;
+    }
+
+    .header {
+      width: 100%;
+    }
+  }
+}
+
+@mixin set-theme($map) {
+  main {
+    background-color: map-get($map, body);
+  }
+}
+
+.light {
+  @include set-theme($light-value-map);
+}
+
+.dark {
+  @include set-theme($dark-value-map);
+}

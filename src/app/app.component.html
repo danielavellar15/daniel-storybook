@@ -1,33 +1,39 @@
-<ui-sidenav>
-  <ng-container header>
-    <lucide-icon
-      left-icon
-      class="header-icon"
-      name="chevron-left-square"
-    ></lucide-icon>
-    <ui-typography variant="h3"> Home</ui-typography>
-  </ng-container>
-  <ui-list>
-    <ui-list-item-button title="Home">
-      <lucide-icon left-icon name="home"></lucide-icon>
-    </ui-list-item-button>
-
-    <ui-list-item-button-group title="Evento">
-      <lucide-icon left-icon name="calendar"></lucide-icon>
-
-      <ui-list-item-button title="Configurar">
-        <lucide-icon left-icon name="settings"></lucide-icon>
+<ui-default-admin-layout-page>
+  <ui-sidenav>
+    <ng-container header>
+      <lucide-icon
+        left-icon
+        class="header-icon"
+        name="chevron-left-square"
+      ></lucide-icon>
+      <ui-typography variant="h3"> Home</ui-typography>
+    </ng-container>
+    <ui-list>
+      <ui-list-item-button title="Home">
+        <lucide-icon left-icon name="home"></lucide-icon>
       </ui-list-item-button>
-      <ui-list-item-button title="Editar">
-        <lucide-icon left-icon name="edit"></lucide-icon>
-      </ui-list-item-button>
-    </ui-list-item-button-group>
 
-    <ui-list-item-button title="Sair">
-      <lucide-icon left-icon name="log-out"></lucide-icon>
-    </ui-list-item-button>
-    <ui-list-item title="AAAAAAa">
-      <lucide-icon left-icon name="log-out"></lucide-icon>
-    </ui-list-item>
-  </ui-list>
-</ui-sidenav>
+      <ui-list-item-button-group title="Evento">
+        <lucide-icon left-icon name="calendar"></lucide-icon>
+
+        <ui-list-item-button title="Configurar">
+          <lucide-icon left-icon name="settings"></lucide-icon>
+        </ui-list-item-button>
+        <ui-list-item-button title="Editar">
+          <lucide-icon left-icon name="edit"></lucide-icon>
+        </ui-list-item-button>
+      </ui-list-item-button-group>
+
+      <ui-list-item-button title="Sair">
+        <lucide-icon left-icon name="log-out"></lucide-icon>
+      </ui-list-item-button>
+      <ui-list-item title="AAAAAAa">
+        <lucide-icon left-icon name="log-out"></lucide-icon>
+      </ui-list-item>
+    </ui-list>
+  </ui-sidenav>
+  <ui-header>
+    <span right-side>Daniel</span>
+  </ui-header>
+  <h1>Ola mundo</h1>
+</ui-default-admin-layout-page>
