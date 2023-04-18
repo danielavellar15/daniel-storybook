@@ -33,7 +33,22 @@
     </ui-list>
   </ui-sidenav>
   <ui-header>
-    <span right-side>Daniel</span>
+    <ui-dropdown-button right-side direction="bottom-left">
+      <button dropdown-trigger>Daniel</button>
+      <ui-list dropdown-items>
+        <ui-list-item-button title="Meu Eventos">
+          <lucide-icon left-icon name="calendar"></lucide-icon>
+        </ui-list-item-button>
+        <ui-list-item-button title="Sair">
+          <lucide-icon left-icon name="log-out"></lucide-icon>
+        </ui-list-item-button>
+      </ui-list>
+    </ui-dropdown-button>
   </ui-header>
-  <h1>Ola mundo</h1>
+  <h1>Solid</h1>
+  <ui-button type="solid" color="primary">Primary</ui-button>
+  <ui-button type="solid" color="secondary">Secondary</ui-button>
+  <h1>Outlined</h1>
+  <ui-button type="outlined" color="primary">Primary</ui-button>
+  <ui-button type="outlined" color="secondary">Secondary</ui-button>
 </ui-default-admin-layout-page>

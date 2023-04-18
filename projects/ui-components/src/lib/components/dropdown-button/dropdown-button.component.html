@@ -1,0 +1,12 @@
+<div
+  class="dropdown-container"
+  [ngClass]="{ open: isOpen }"
+  [class]="direction"
+>
+  <div class="dropdown-toggle" (click)="toggleDropdown()">
+    <ng-content select="[dropdown-trigger]"></ng-content>
+  </div>
+  <div class="dropdown-content" #dropdownContent>
+    <ng-content select="[dropdown-items]"></ng-content>
+  </div>
+</div>
