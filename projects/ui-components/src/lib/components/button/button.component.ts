@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'ui-button',
@@ -11,6 +11,11 @@ export class ButtonComponent {
   @Input() theme: string = 'light';
   @Input() fontSize = '';
   @Input() color = 'primary';
+  @Output() onButtonClick = new EventEmitter();
+
+  onClick() {
+    this.onButtonClick.emit();
+  }
 
   constructor() {}
 }

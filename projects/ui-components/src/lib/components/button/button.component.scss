@@ -13,8 +13,21 @@ button {
 
 .solid {
   &:hover:enabled {
-    filter: brightness(0.9);
+    filter: brightness(0.8);
   }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  &:active:enabled {
+    filter: brightness(0.6);
+  }
+}
+
+.outlined {
+  background-color: transparent;
 
   &:disabled {
     opacity: 0.4;
@@ -22,12 +35,18 @@ button {
   }
 }
 
-.outlined {
+.plain {
   background-color: transparent;
+  border-color: transparent;
 
-  &:hover:enabled {
-    filter: brightness(0.9);
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
   }
+}
+
+.soft {
+  border-color: transparent;
 
   &:disabled {
     opacity: 0.4;
@@ -38,8 +57,17 @@ button {
 @mixin set-theme($map) {
   &.primary {
     &.outlined {
-      border-color: map-get($map, primary);
+      border-color: rgba(map-get($map, primary), 0.5);
       color: map-get($map, primary);
+
+      &:hover:enabled {
+        border-color: map-get($map, primary);
+        background-color: rgba(map-get($map, primary), 0.1);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, primary), 0.3);
+      }
     }
 
     &.solid {
@@ -47,18 +75,78 @@ button {
       color: map-get($map, primary-text);
       background-color: map-get($map, primary);
     }
+
+    &.plain {
+      color: map-get($map, primary);
+      border-color: transparent;
+
+      &:hover:enabled {
+        background-color: rgba(map-get($map, primary), 0.2);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, primary), 0.3);
+      }
+    }
+
+    &.soft {
+      color: map-get($map, primary);
+      background-color: rgba(map-get($map, primary), 0.2);
+
+      &:hover:enabled {
+        background-color: rgba(map-get($map, primary), 0.3);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, primary), 0.4);
+      }
+    }
   }
 
   &.secondary {
     &.outlined {
-      border-color: map-get($map, secondary);
+      border-color: rgba(map-get($map, secondary), 0.5);
       color: map-get($map, secondary);
+
+      &:hover:enabled {
+        border-color: map-get($map, secondary);
+        background-color: rgba(map-get($map, secondary), 0.1);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, secondary), 0.3);
+      }
     }
 
     &.solid {
       border-color: map-get($map, secondary);
       background-color: map-get($map, secondary);
       color: map-get($map, secondary-text);
+    }
+
+    &.plain {
+      color: map-get($map, secondary);
+
+      &:hover:enabled {
+        background-color: rgba(map-get($map, secondary), 0.2);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, secondary), 0.3);
+      }
+    }
+
+    &.soft {
+      color: map-get($map, secondary);
+      background-color: rgba(map-get($map, secondary), 0.2);
+
+      &:hover:enabled {
+        background-color: rgba(map-get($map, secondary), 0.3);
+      }
+
+      &:active:enabled {
+        background-color: rgba(map-get($map, secondary), 0.4);
+      }
     }
   }
 }

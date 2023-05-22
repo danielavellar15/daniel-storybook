@@ -3,6 +3,7 @@
   type="button"
   [disabled]="disabled"
   [ngClass]="[theme, type, color]"
+  (click)="onClick()"
 >
   <ng-content></ng-content>
 </button>
