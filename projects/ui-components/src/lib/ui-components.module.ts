@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { SidenavModule } from './components/sidenav/sidenav.module';
-import { TypographyModule } from './components/typography/typography.module';
-import { ListModule } from './components/list/list.module';
-import { HeaderModule } from './components/header/header.module';
+import { SidenavModule } from './components/common/sidenav/sidenav.module';
+import { TypographyModule } from './components/common/typography/typography.module';
+import { ListModule } from './components/common/list/list.module';
+import { HeaderModule } from './components/common/header/header.module';
 import { DefaultAdminLayoutPageModule } from './layout/page/default-admin-layout-page/default-admin-layout-page.module';
-import { DropdownButtonModule } from './components/dropdown-button/dropdown-button.module';
-import { ButtonModule } from './components/button/button.module';
+import { DropdownButtonModule } from './components/common/dropdown-button/dropdown-button.module';
+import { ButtonModule } from './components/common/button/button.module';
+import { ProfileMenuItemModule } from './components/complex/profile-menu-item/profile-menu-item.module';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { ButtonModule } from './components/button/button.module';
     DefaultAdminLayoutPageModule,
     DropdownButtonModule,
     ButtonModule,
+    ProfileMenuItemModule,
   ],
   exports: [
     SidenavModule,
@@ -26,6 +28,7 @@ import { ButtonModule } from './components/button/button.module';
     DefaultAdminLayoutPageModule,
     DropdownButtonModule,
     ButtonModule,
+    ProfileMenuItemModule,
   ],
 })
 export class UiComponentsModule {}

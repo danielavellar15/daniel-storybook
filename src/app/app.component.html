@@ -33,9 +33,12 @@
     </ui-list>
   </ui-sidenav>
   <ui-header>
-    <ui-dropdown-button right-side direction="bottom-left">
-      <button dropdown-trigger>Daniel</button>
-      <ui-list dropdown-items>
+    <ui-profile-menu-item
+      right-side
+      [title]="'DanielSA'"
+      [profilePicture]="'./assets/profile-pic.jpg'"
+    >
+      <ui-list>
         <ui-list-item-button title="Meu Eventos">
           <lucide-icon left-icon name="calendar"></lucide-icon>
         </ui-list-item-button>
@@ -43,7 +46,7 @@
           <lucide-icon left-icon name="log-out"></lucide-icon>
         </ui-list-item-button>
       </ui-list>
-    </ui-dropdown-button>
+    </ui-profile-menu-item>
   </ui-header>
   <h1>Solid</h1>
   <ui-button type="solid" color="primary">Primary</ui-button>

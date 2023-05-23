@@ -11,6 +11,7 @@ export class ButtonComponent {
   @Input() theme: string = 'light';
   @Input() fontSize = '';
   @Input() color = 'primary';
+  @Input() size: 'md' | 'lg' | 'sm' = 'md';
   @Output() onButtonClick = new EventEmitter();
 
   onClick() {

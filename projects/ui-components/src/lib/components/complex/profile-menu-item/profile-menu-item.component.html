@@ -1,0 +1,15 @@
+<ui-dropdown-button direction="bottom-left" class="toogle">
+  <div class="btn-details" dropdown-trigger>
+    <div class="title">
+      {{ title }}
+    </div>
+    <img
+      *ngIf="profilePicture !== ''"
+      class="profile-picture"
+      [src]="profilePicture"
+    />
+  </div>
+  <div dropdown-items>
+    <ng-content select="ui-list"></ng-content>
+  </div>
+</ui-dropdown-button>
