@@ -7,6 +7,8 @@ import { DefaultAdminLayoutPageModule } from './layout/page/default-admin-layout
 import { DropdownButtonModule } from './components/common/dropdown-button/dropdown-button.module';
 import { ButtonModule } from './components/common/button/button.module';
 import { ProfileMenuItemModule } from './components/complex/profile-menu-item/profile-menu-item.module';
+import { CardModule } from './components/common/card/card.module';
+import { PageHeaderModule } from './components/complex/page-header/page-header.module';
 
 @NgModule({
   declarations: [],
@@ -19,6 +21,8 @@ import { ProfileMenuItemModule } from './components/complex/profile-menu-item/pr
     DropdownButtonModule,
     ButtonModule,
     ProfileMenuItemModule,
+    CardModule,
+    PageHeaderModule,
   ],
   exports: [
     SidenavModule,
@@ -29,6 +33,8 @@ import { ProfileMenuItemModule } from './components/complex/profile-menu-item/pr
     DropdownButtonModule,
     ButtonModule,
     ProfileMenuItemModule,
+    CardModule,
+    PageHeaderModule,
   ],
 })
 export class UiComponentsModule {}

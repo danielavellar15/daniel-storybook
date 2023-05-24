@@ -1,0 +1,18 @@
+@import "../../../../../styles.scss";
+
+.card {
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+
+@mixin set-theme($map) {
+  background-color: map-get($map, background-color);
+}
+
+.light {
+  @include set-theme($light-value-map);
+}
+
+.dark {
+  @include set-theme($dark-value-map);
+}
