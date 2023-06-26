@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class DefaultAdminLayoutPageComponent {
   @Input() theme = 'light';
+  @Input() isCollapsedSidenav = false;
 }

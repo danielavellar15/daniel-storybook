@@ -3,10 +3,18 @@
 .screen {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  height: 100vh;
 
   .sidenav {
-    width: fit-content;
+    width: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width 0.3s;
+
+    &.collapsed {
+      width: 0px;
+      overflow-x: hidden;
+    }
   }
 
   .container-right {
@@ -17,6 +25,7 @@
     main {
       flex: 1;
       padding: 2rem;
+      overflow-y: auto;
     }
 
     .header {

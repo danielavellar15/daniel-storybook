@@ -1,5 +1,5 @@
-<ui-default-admin-layout-page>
-  <ui-sidenav>
+<ui-default-admin-layout-page [isCollapsedSidenav]="isCollapsedSidenav">
+  <ui-sidenav [isCollapsed]="isCollapsedSidenav">
     <ng-container header>
       <lucide-icon
         left-icon
@@ -33,7 +33,12 @@
     </ui-list>
   </ui-sidenav>
   <ui-header>
-    <ui-button left-side type="plain" color="secondary">
+    <ui-button
+      (onButtonClick)="toggleSidenav()"
+      left-side
+      type="plain"
+      color="secondary"
+    >
       <lucide-icon left-icon name="menu"></lucide-icon>
     </ui-button>
     <ui-profile-menu-item

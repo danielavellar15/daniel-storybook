@@ -1,5 +1,5 @@
 <div class="screen" [class]="theme">
-  <div class="sidenav">
+  <div class="sidenav" [ngClass]="{ collapsed: isCollapsedSidenav }">
     <ng-content select="ui-sidenav"></ng-content>
   </div>
   <div class="container-right">
