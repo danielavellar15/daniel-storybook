@@ -1,4 +1,7 @@
-<ui-default-admin-layout-page [isCollapsedSidenav]="isCollapsedSidenav">
+<ui-default-admin-layout-page
+  [isCollapsedSidenav]="isCollapsedSidenav"
+  (onCloseSidenav)="toggleSidenav($event)"
+>
   <ui-sidenav [isCollapsed]="isCollapsedSidenav">
     <ng-container header>
       <lucide-icon
@@ -34,7 +37,7 @@
   </ui-sidenav>
   <ui-header>
     <ui-button
-      (onButtonClick)="toggleSidenav()"
+      (onButtonClick)="toggleSidenav(!this.isCollapsedSidenav)"
       left-side
       type="plain"
       color="secondary"

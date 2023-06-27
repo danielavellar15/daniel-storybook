@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'daniel-storybook';
   isCollapsedSidenav = false;
 
-  toggleSidenav() {
-    this.isCollapsedSidenav = !this.isCollapsedSidenav;
+  toggleSidenav(value: boolean) {
+    this.isCollapsedSidenav = value;
   }
 }
