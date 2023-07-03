@@ -9,6 +9,7 @@ import { ButtonModule } from './components/common/button/button.module';
 import { ProfileMenuItemModule } from './components/complex/profile-menu-item/profile-menu-item.module';
 import { CardModule } from './components/common/card/card.module';
 import { PageHeaderModule } from './components/complex/page-header/page-header.module';
+import { NotificationMenuItemModule } from './components/complex/notification-menu-item/notification-menu-item.module';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { PageHeaderModule } from './components/complex/page-header/page-header.m
     ProfileMenuItemModule,
     CardModule,
     PageHeaderModule,
+    NotificationMenuItemModule,
   ],
   exports: [
     SidenavModule,
@@ -35,6 +37,7 @@ import { PageHeaderModule } from './components/complex/page-header/page-header.m
     ProfileMenuItemModule,
     CardModule,
     PageHeaderModule,
+    NotificationMenuItemModule,
   ],
 })
 export class UiComponentsModule {}
