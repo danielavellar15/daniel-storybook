@@ -50,18 +50,25 @@
       [profilePicture]="'./assets/profile-pic.jpg'"
     >
       <ui-list>
-        <ui-list-item-button title="Meu Eventos">
+        <ui-list-item-button title="Meu Eventos" size="sm">
           <lucide-icon left-icon name="calendar"></lucide-icon>
         </ui-list-item-button>
-        <ui-list-item-button title="Sair">
+        <ui-list-item-button title="Sair" size="sm">
           <lucide-icon left-icon name="log-out"></lucide-icon>
         </ui-list-item-button>
       </ui-list>
     </ui-profile-menu-item>
   </ui-header>
   <ui-page-header title="Home">
+    <nav breadcrumb aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+      </ol>
+    </nav>
     <ui-button rightItem type="solid" color="primary">
-      <lucide-icon left-icon name="plus"></lucide-icon>
+      <lucide-icon left-icon size="20" name="plus"></lucide-icon>
       Novo
     </ui-button>
   </ui-page-header>

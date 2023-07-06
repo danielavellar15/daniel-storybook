@@ -3,6 +3,7 @@
 .card {
   border-radius: 0.5rem;
   padding: 0.8rem;
+  border: 0;
 }
 
 @mixin set-theme($map) {

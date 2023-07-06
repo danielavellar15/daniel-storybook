@@ -24,8 +24,12 @@ li {
     text-align: left;
     padding: 1rem;
 
+    // &:hover {
+    //   background: #424242;
+    // }
+
     &:hover {
-      background: #424242;
+      background: rgba(59, 131, 246, 0.1);
     }
   }
 

@@ -7,9 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ListItemButtonComponent {
   @Input() title = '';
+  @Input() size: 'md' | 'lg' | 'sm' = 'sm';
+  public variant = 'button';
   @Output() onButtonClick = new EventEmitter();
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.variant = this.size == 'sm' ? 'paragraph' : 'button';
+    console.log('this.variant', this.variant);
+  }
 
   onClick() {
     this.onButtonClick.emit();

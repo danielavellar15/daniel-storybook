@@ -7,13 +7,13 @@
   .left-side {
     display: flex;
     flex-direction: column;
-
-    .breadcrumb {
-      margin-top: -0.2rem;
-    }
   }
 
   .right-side {
     margin-left: auto;
   }
+}
+
+ol {
+  margin-bottom: 0 !important;
 }

@@ -1,7 +1,7 @@
 <li>
   <button class="item-button" (click)="onClick()">
     <ng-content select="[left-icon]"></ng-content>
-    <ui-typography variant="button">
+    <ui-typography [variant]="variant">
       {{ title }}
     </ui-typography>
     <div class="right-icon">
