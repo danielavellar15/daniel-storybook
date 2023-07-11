@@ -12,6 +12,7 @@ export class ButtonComponent {
   @Input() fontSize = '';
   @Input() color = 'primary';
   @Input() size: 'md' | 'lg' | 'sm' = 'md';
+  @Input() rounded = false;
   @Output() onButtonClick = new EventEmitter();
 
   onClick() {

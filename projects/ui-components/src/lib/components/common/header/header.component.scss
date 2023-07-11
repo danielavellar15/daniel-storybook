@@ -8,6 +8,7 @@
 header {
   position: fixed;
   display: flex;
+  z-index: 99;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;

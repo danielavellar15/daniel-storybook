@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ListItemButtonComponent {
   @Input() title = '';
   @Input() size: 'md' | 'lg' | 'sm' = 'sm';
+  @Input() theme = 'light';
   public variant = 'button';
   @Output() onButtonClick = new EventEmitter();
 

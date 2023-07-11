@@ -1,6 +1,7 @@
 .page-header {
   margin-bottom: 1rem;
   display: flex;
+  gap: 0.5rem;
   flex-direction: row;
   align-items: center;
 
@@ -14,6 +15,6 @@
   }
 }
 
-ol {
+::ng-deep .breadcrumb {
   margin-bottom: 0 !important;
 }

@@ -1,3 +1,5 @@
+@import "../../../../../../styles.scss";
+
 :host {
   width: 100%;
 }
@@ -23,14 +25,6 @@ li {
     line-height: 1;
     text-align: left;
     padding: 1rem;
-
-    // &:hover {
-    //   background: #424242;
-    // }
-
-    &:hover {
-      background: rgba(59, 131, 246, 0.1);
-    }
   }
 
   .left-icon > * {
@@ -41,4 +35,20 @@ li {
     margin-left: auto;
     color: #fff;
   }
+}
+
+@mixin set-theme($map) {
+  .item-button {
+    &:hover {
+      background: map-get($map, tertiary);
+    }
+  }
+}
+
+.light {
+  @include set-theme($light-value-map);
+}
+
+.dark {
+  @include set-theme($dark-value-map);
 }

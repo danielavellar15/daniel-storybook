@@ -25,6 +25,10 @@ button {
   &.lg {
     padding: 0.9rem;
   }
+
+  &.rounded {
+    border-radius: 50%;
+  }
 }
 
 .solid {
